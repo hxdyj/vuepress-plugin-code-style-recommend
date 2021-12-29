@@ -60,9 +60,9 @@ const codeStylePlugin: PluginFunction<CodeStylePluginOptions> = options => {
 	})
 	pluginObj.name = 'vuepress-plugin-code-style-recommend'
 	pluginObj.clientAppSetupFiles = path.resolve(__dirname, './clientAppSetup.js')
-	/* pluginObj.alias = {
+	pluginObj.alias = {
 		'@plugin-code-style_style': path.resolve(__dirname, '../style/'),
-	} */
+	}
 	return pluginObj
 }
 export { codeStylePlugin }

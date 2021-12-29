@@ -1,6 +1,6 @@
 {
 	"name": "vuepress-plugin-code-style-recommend",
-	"version": "0.0.4",
+	"version": "0.0.10",
 	"keywords": [
 		"vuepress-plugin-code-style-recommend"
 	],
@@ -12,13 +12,9 @@
 		"@rollup/plugin-strip": "^2.1.0",
 		"@vuepress/core": "^2.0.0-beta.29",
 		"@vuepress/plugin-container": "^2.0.0-beta.29",
-		"postcss-import": "^14.0.2",
 		"rollup-plugin-dts": "^3.0.2",
-		"rollup-plugin-postcss": "^4.0.2",
-		"rollup-plugin-scss": "^3.0.0",
 		"rollup-plugin-typescript": "^1.0.1",
 		"rollup-plugin-uglify": "^6.0.4",
-		"sass": "^1.45.1",
 		"tslib": "^2.3.1",
 		"typescript": "^4.5.4"
 	},
@@ -26,6 +22,7 @@
 	"typings": "typings/index.d.ts",
 	"files": [
 		"lib",
+		"img",
 		"style",
 		"typings",
 		"README.md"
