@@ -4,6 +4,8 @@ import strip from '@rollup/plugin-strip'
 import dts from 'rollup-plugin-dts'
 import scss from 'rollup-plugin-scss'
 
+import postcss from 'rollup-plugin-postcss'
+import postcssImport from 'postcss-import'
 import pkg from './package.json'
 
 export default [
@@ -16,13 +18,29 @@ export default [
 		],
 	},
 	{
-		external: [/\.css$/u],
 		input: 'package/index.ts',
 		output: {
-			file: pkg.main,
-			format: 'esm',
+			dir: 'lib',
+			format: 'cjs',
 		},
 		plugins: [
+			uglify(),
+			typescript(),
+			strip({
+				include: '**/*.(ts|js)',
+			}),
+		],
+	},
+	{
+		input: 'package/clientAppSetup.ts',
+		output: {
+			dir: 'lib',
+			format: 'cjs',
+		},
+		plugins: [
+			postcss({
+				plugins: [postcssImport()],
+			}),
 			uglify(),
 			typescript(),
 			strip({

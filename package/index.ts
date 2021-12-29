@@ -2,7 +2,6 @@ import type { PluginFunction, PluginObject, PluginOptions } from '@vuepress/core
 import containerPlugin from '@vuepress/plugin-container'
 import { ContainerPluginOptions } from '@vuepress/plugin-container'
 import path from 'path'
-import '../style/index.css'
 type CustomMarkdownName = 'codeStyle'
 type CustomMarkdownInfo = 'good' | 'bad'
 type CustomContainerPluginOptions = Omit<ContainerPluginOptions, 'before' | 'after'> & {
@@ -60,6 +59,7 @@ const codeStylePlugin: PluginFunction<CodeStylePluginOptions> = options => {
 		},
 	})
 	pluginObj.name = 'vuepress-plugin-code-style-recommend'
+	pluginObj.clientAppSetupFiles = path.resolve(__dirname, './clientAppSetup.js')
 	/* pluginObj.alias = {
 		'@plugin-code-style_style': path.resolve(__dirname, '../style/'),
 	} */
