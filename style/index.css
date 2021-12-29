@@ -1,7 +1,7 @@
 @font-face {
   font-family: "iconfont-code-style";
   /* Project id 3092056 */
-  src: url("@plugin-code-style_style/iconfont/iconfont.woff2?t=1640739609106") format("woff2"), url("@plugin-code-style_style/iconfont/iconfont.woff?t=1640739609106") format("woff"), url("@plugin-code-style_style/iconfont/iconfont.ttf?t=1640739609106") format("truetype");
+  src: url("./iconfont.woff2?t=1640739609106") format("woff2"), url("./iconfont.woff?t=1640739609106") format("woff"), url("./iconfont.ttf?t=1640739609106") format("truetype");
 }
 .iconfont-code-style {
   font-family: "iconfont-code-style" !important;

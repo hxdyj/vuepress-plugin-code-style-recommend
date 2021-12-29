@@ -1,6 +1,6 @@
 {
 	"name": "vuepress-plugin-code-style-recommend",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"keywords": [
 		"vuepress-plugin-code-style-recommend"
 	],
@@ -21,11 +21,9 @@
 		"typescript": "^4.5.4"
 	},
 	"main": "lib/index.js",
-	"module": "es/index.js",
 	"typings": "typings/index.d.ts",
 	"files": [
 		"lib",
-		"es",
 		"style",
 		"typings",
 		"README.md"

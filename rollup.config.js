@@ -4,18 +4,25 @@ import strip from '@rollup/plugin-strip'
 import dts from 'rollup-plugin-dts'
 import scss from 'rollup-plugin-scss'
 
+import pkg from './package.json'
+
 export default [
 	{
-		// external: ['pdf-to-printer'],
-		input: 'package/index.ts',
-		output: {
-			file: 'es/index.js',
-			format: 'esm',
-		},
+		input: 'package/style.ts',
 		plugins: [
 			scss({
 				output: 'style/index.css',
 			}),
+		],
+	},
+	{
+		external: [/\.css$/u],
+		input: 'package/index.ts',
+		output: {
+			file: pkg.main,
+			format: 'esm',
+		},
+		plugins: [
 			uglify(),
 			typescript(),
 			strip({
@@ -24,34 +31,12 @@ export default [
 		],
 	},
 	{
-		// external: ['pdf-to-printer'],
+		external: [/\.css$/u],
 		input: 'package/index.ts',
 		output: {
-			file: 'lib/index.js',
-			format: 'cjs',
-		},
-		plugins: [
-			scss({
-				output: 'style/index.css',
-			}),
-			uglify(),
-			typescript(),
-			strip({
-				include: '**/*.(ts|js)',
-			}),
-		],
-	},
-	{
-		input: 'package/index.ts',
-		output: {
-			file: 'typings/index.d.ts',
+			file: pkg.typings,
 			format: 'esm',
 		},
-		plugins: [
-			scss({
-				output: 'style/index.css',
-			}),
-			dts(),
-		],
+		plugins: [dts()],
 	},
 ]
