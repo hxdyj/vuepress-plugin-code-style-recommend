@@ -1,4 +1,4 @@
-import './index.scss'
+import '../style/index.scss'
 
 import type { PluginFunction, PluginObject, PluginOptions } from '@vuepress/core'
 import containerPlugin from '@vuepress/plugin-container'
