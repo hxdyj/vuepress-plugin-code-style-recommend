@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "iconfont-code-style";
+  /* Project id 3092056 */
+  src: url("@plugin-code-style_style/iconfont/iconfont.woff2?t=1640739609106") format("woff2"), url("@plugin-code-style_style/iconfont/iconfont.woff?t=1640739609106") format("woff"), url("@plugin-code-style_style/iconfont/iconfont.ttf?t=1640739609106") format("truetype");
+}
+.iconfont-code-style {
+  font-family: "iconfont-code-style" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-code-style-error:before {
+  content: "\e600";
+}
+
+.icon-code-style-success:before {
+  content: "\e679";
+}
+
+.code-style {
+  border-radius: 7px;
+  margin: 1.6em 0;
+  padding: 1.6em 1.6em 1em;
+  position: relative;
+  border: 1px solid transparent;
+  border-top: 5px solid transparent;
+}
+.code-style h4 {
+  margin-top: 0;
+}
+.code-style h4 i {
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
+}
+.code-style.code-style-bad {
+  background: #f7e8e8;
+  border-color: #dd9c9c;
+}
+.code-style.code-style-bad h4 {
+  color: #a63a3a;
+}
+.code-style.code-style-good {
+  background: #d7efd7;
+  border-color: #8ed28e;
+}
+.code-style.code-style-good h4 {
+  color: #398e39;
+}

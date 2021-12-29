@@ -1,0 +1,31 @@
+@import '../style/iconfont/iconfont.scss';
+.code-style {
+	border-radius: 7px;
+	margin: 1.6em 0;
+	padding: 1.6em 1.6em 1em;
+	position: relative;
+	border: 1px solid transparent;
+	border-top: 5px solid transparent;
+	h4 {
+		margin-top: 0;
+		i {
+			margin-right: 8px;
+			position: relative;
+			top: 1px;
+		}
+	}
+	&.code-style-bad {
+		background: #f7e8e8;
+		border-color: #dd9c9c;
+		h4 {
+			color: #a63a3a;
+		}
+	}
+	&.code-style-good {
+		background: #d7efd7;
+		border-color: #8ed28e;
+		h4 {
+			color: #398e39;
+		}
+	}
+}
